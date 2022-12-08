@@ -1,0 +1,27 @@
+﻿title: YarnDialogueScript
+tags:
+---
+
+===
+title:StartSection
+tag:Introduction
+---
+<<declare $usedBeforeto=false>>
+<<declare $monthsOfUse=0.00>>
+<<declare $colourto="Blue">>
+
+
+Welcome to the Yarn Spinner.
+
+Is this your firsttime to VR Yarn Spinner?
+
+//options
+-> Yes, this is my first time.
+    <<set $usedBeforeto=true>>
+    <<jump UsedYarnSpinnerBefore>>
+
+-> No, I have used Yarn Spinner.
+    <<set $usedBeforeto=false>>
+    <<jump NeverUsedYarnSpinnerBefore>>
+
+===
