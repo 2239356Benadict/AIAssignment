@@ -6,6 +6,8 @@ public class DoorOpeningScript : MonoBehaviour
 {
     public AudioSource doorAudioSource;
     public AudioClip[] doorAudioClip;
+
+    public GameObject door;
     void Start()
     {
         
@@ -17,10 +19,15 @@ public class DoorOpeningScript : MonoBehaviour
         {
             StartCoroutine(CardDetectedSuccessful(0.5f));
         }
+        else
+        {
+            doorAudioSource.clip = doorAudioClip[2];
+
+        }
     }
 
     /// <summary>
-    /// Card detected, and door oprning audio and door open with a delay will play 
+    /// Card detected and door opening audio play, and door opens with a delay.
     /// </summary>
     /// <param name="waitingTime"></param>
     /// <returns></returns>
@@ -33,7 +40,7 @@ public class DoorOpeningScript : MonoBehaviour
         yield return new WaitForSeconds(waitingTime);
         doorAudioSource.clip = doorAudioClip[1];
         doorAudioSource.Play();
-        gameObject.transform.Rotate(new Vector3(0f,90f,0f));
+        door.transform.Rotate(new Vector3(0f,90f,0f));
        
     }
 
