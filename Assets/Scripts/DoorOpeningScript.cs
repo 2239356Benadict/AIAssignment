@@ -7,6 +7,8 @@ public class DoorOpeningScript : MonoBehaviour
     public AudioSource doorAudioSource;
     public AudioClip[] doorAudioClip;
 
+    public IDValidation validationScript;
+
     public GameObject door;
     void Start()
     {
@@ -15,14 +17,41 @@ public class DoorOpeningScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "IDCard")
+        if (other.gameObject.tag == "IDCard")
         {
-            StartCoroutine(CardDetectedSuccessful(0.5f));
+            validationScript = other.GetComponent<IDValidation>();
+            CheckCardValidationStatus();
         }
         else
         {
             doorAudioSource.clip = doorAudioClip[2];
 
+        }
+    }
+
+    private void CheckCardValidationStatus()
+    {
+        if (gameObject.tag == "Door")
+        {
+            if (validationScript.isValidated)
+            {
+                StartCoroutine(CardDetectedSuccessful(0.5f));
+            }
+            else
+            {
+                doorAudioSource.clip = doorAudioClip[2];
+            }
+        }
+        else if (gameObject.tag == "Security Door")
+        {
+            if (validationScript.isValidated && validationScript.isSecurityValidated)
+            {
+                StartCoroutine(CardDetectedSuccessful(0.5f));
+            }
+            else
+            {
+                doorAudioSource.clip = doorAudioClip[2];
+            }
         }
     }
 
@@ -33,14 +62,14 @@ public class DoorOpeningScript : MonoBehaviour
     /// <returns></returns>
     private IEnumerator CardDetectedSuccessful(float waitingTime)
     {
-   
+        
         doorAudioSource.clip = doorAudioClip[0];
         doorAudioSource.Play();
 
         yield return new WaitForSeconds(waitingTime);
         doorAudioSource.clip = doorAudioClip[1];
         doorAudioSource.Play();
-        door.transform.Rotate(new Vector3(0f,90f,0f));
+        door.transform.Rotate(new Vector3(0f, 90f, 0f));
        
     }
 

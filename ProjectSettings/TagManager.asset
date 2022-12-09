@@ -6,11 +6,14 @@ TagManager:
   tags:
   - IDCard
   - Validator
+  - Security Validator
+  - Door
+  - Security Door
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - 

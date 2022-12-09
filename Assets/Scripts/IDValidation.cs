@@ -36,15 +36,17 @@ public class IDValidation : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(gameObject.tag == "Validator")
+        if(other.gameObject.tag == "Validator")
         {
             StartCoroutine(ValidationRoutine());
             validatedIDNumber = Random.Range(1000, 5000);
             validatedID.text = validatedIDNumber.ToString();
+            Debug.Log("Validated");
         }
-        else if(gameObject.tag == "Security Validator")
+        else if(other.gameObject.tag == "Security Validator")
         {
             StartCoroutine(SecurityValidationRoutine());
+            Debug.Log("Security Check Pass");
         }
     }
 
