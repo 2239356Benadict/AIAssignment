@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ValidationText : MonoBehaviour
 {
-    public TextMesh validationText;
+    public TextMeshProUGUI validationText;
     private IDValidation validationOutputText;
 
 
