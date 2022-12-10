@@ -3,25 +3,43 @@ tags:
 ---
 
 ===
-title:StartSection
+title:KateDialogue
 tag:Introduction
 ---
-<<declare $usedBeforeto=false>>
-<<declare $monthsOfUse=0.00>>
-<<declare $colourto="Blue">>
+<<declare $needHelpToMoveAhead=false>>
+<<declare $noNeedOfhelp=false>>
+<<declare $explain=false>>
 
-
-Welcome to the Yarn Spinner.
-
-Is this your firsttime to VR Yarn Spinner?
-
+Hi, Do you need any help?  #line:0c8ef54 
 //options
--> Yes, this is my first time.
-    <<set $usedBeforeto=true>>
-    <<jump UsedYarnSpinnerBefore>>
+-> Yes #line:01ec957 
+    <<set $needHelpToMoveAhead=true>>
+    <<jump NeedHelp>>
+-> No #line:0fdd769 
+    <<set $noNeedOfhelp=true>>
+    <<jump NoNeedOfHelp>>
+===
 
--> No, I have used Yarn Spinner.
-    <<set $usedBeforeto=false>>
-    <<jump NeverUsedYarnSpinnerBefore>>
+title: NeedHelp
+tag: NeedHelpFor
+---
+How can I help you? #line:0faa617 
+//options
+-> Please explain to me what to do. #line:099f9d7 
+    <<set $explain=true>>
+    <<jump Explanation>>
+-> What to do next? #line:0afda53 
+===
 
+title: NoNeedOfHelp
+tag: NoHelpNeeded
+---
+Sorry for bothering you. #line:093be7b 
+===
+
+title:Explanation
+tag:Steps
+---
+Please go and pick up the ID card from the table.Please insert the ID card into the machine and wait for five seconds to validate your ID.  #line:0a0dce6 
+After validating you can open the door using the ID card by scanning at the door. Once you reach the high-security area ask for validation again and scan the door again to enter. #line:0120058 
 ===

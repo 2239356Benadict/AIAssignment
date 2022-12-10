@@ -1,0 +1,33 @@
+﻿title: LouiseDialogueScript
+tags:
+---
+
+===
+title:LouiseDialogue
+tag:Introduction
+---
+<<declare $needToUpadteID=false>>
+<<declare $noNeedUpdate=false>>
+
+Hi, Do you need to update ID? #line:0cddc87 
+//options
+-> Yes #line:06a3406 
+    <<<set $needToUpadteID=true>>
+    <<jump NeedToUpdate>>
+-> No #line:0b88bde 
+    <<<set $noNeedOfhelp=true>>
+    <<jump NoNeedOfUpdation>>
+===
+
+title: NeedToUpdate
+tag: NeedUpdation
+---
+Please place the ID on top op the scanner. #line:00e3e15 
+After the security check turns green tick, you can take it. #line:0727af9 
+===
+
+title: NoNeedOfUpdation
+tag: NoUpdationNeeded
+---
+Sorry for bothering you. #line:0824419 
+===

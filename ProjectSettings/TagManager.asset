@@ -9,6 +9,7 @@ TagManager:
   - Security Validator
   - Door
   - Security Door
+  - NPC
   layers:
   - Default
   - TransparentFX

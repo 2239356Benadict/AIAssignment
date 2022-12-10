@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using Yarn.Unity;
 
 namespace Assets.Scripts
 {

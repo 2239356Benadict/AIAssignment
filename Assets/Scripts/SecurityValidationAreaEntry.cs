@@ -5,6 +5,7 @@ using UnityEngine;
 public class SecurityValidationAreaEntry : MonoBehaviour
 {
     public float pullBackValue;
+    public Animator avatarAnimator;
 
     public Transform[] pullBackObjects;
     private void OnTriggerEnter(Collider other)
@@ -16,6 +17,7 @@ public class SecurityValidationAreaEntry : MonoBehaviour
                 obj.transform.Translate(new Vector3(0.01f, 0f, pullBackValue));
                 obj.transform.Rotate(new Vector3(0f, -95f, 0f), Space.Self);
                 Debug.Log("Player entered security check area.");
+                avatarAnimator.Play("");
             }
             
         }
