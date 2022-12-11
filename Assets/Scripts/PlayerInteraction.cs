@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿// Tested in unity editor and Oculus Quest
+// Copyright (c) 2239356@swanseauniversity. All rights reserved.
+// Dated: 12/12/2020
+// This script is used for NPC to interact with player.
+
+using System.Collections;
 using UnityEngine;
 using Yarn.Unity;
 

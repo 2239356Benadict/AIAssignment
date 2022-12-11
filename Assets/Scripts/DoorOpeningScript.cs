@@ -1,3 +1,8 @@
+// Tested in unity editor and Oculus Quest
+// Copyright (c) 2239356@swanseauniversity. All rights reserved.
+// Dated: 12/12/2020
+// This script is used to open the door while the ID card is scanned.
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,11 +15,11 @@ public class DoorOpeningScript : MonoBehaviour
     public IDValidation validationScript;
 
     public GameObject door;
-    void Start()
-    {
-        
-    }
 
+    /// <summary>
+    /// Checking whether the ID Card is collided or not.
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "IDCard")
@@ -25,10 +30,12 @@ public class DoorOpeningScript : MonoBehaviour
         else
         {
             doorAudioSource.clip = doorAudioClip[2];
-
         }
     }
 
+    /// <summary>
+    /// This method is used to check the door tag and and validation status of the ID Card. 
+    /// </summary>
     private void CheckCardValidationStatus()
     {
         if (gameObject.tag == "Door")
@@ -61,26 +68,14 @@ public class DoorOpeningScript : MonoBehaviour
     /// <param name="waitingTime"></param>
     /// <returns></returns>
     private IEnumerator CardDetectedSuccessful(float waitingTime)
-    {
-        
+    { 
         doorAudioSource.clip = doorAudioClip[0];
         doorAudioSource.Play();
 
         yield return new WaitForSeconds(waitingTime);
         doorAudioSource.clip = doorAudioClip[1];
         doorAudioSource.Play();
-        door.transform.Rotate(new Vector3(0f, 90f, 0f));
-       
+        door.transform.Rotate(new Vector3(0f, 90f, 0f));      
     }
 
-    void Update()
-    {
-        
-    }
-
-
-    public void DoorOpen()
-    {
-        
-    }
 }

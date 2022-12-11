@@ -1,3 +1,8 @@
+// Tested in unity editor and Oculus Quest
+// Copyright (c) 2239356@swanseauniversity. All rights reserved.
+// Dated: 12/12/2020
+// This script is used to update the status of the ID card.
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

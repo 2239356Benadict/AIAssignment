@@ -1,0 +1,49 @@
+﻿title: VanguardDialogueScript
+tags:
+---
+
+===
+title:VanguardDialogue
+tag:Story
+---
+<<declare $likeToKnow=false>>
+<<declare $noNeedToKnow=false>>
+
+Hi, Would you like to know what happened to us? #line:0302758 
+//options
+-> Yes #line:077ef23 
+    <<set $likeToKnow=true>>
+    <<jump KnowMore>>
+-> No #line:0ced794 
+    <<set $noNeedToKnow=true>>
+    <<jump NoNeed>>
+===
+
+title: KnowMore
+tag: WhatHappened
+---
+As the human walked down the dusty road, he could feel the tension in the air. It was as if the very atmosphere was charged with electricity, and he knew that something was about to happen. He quickened his pace, eager to reach his destination and get out of this strange, alien world. #line:0a6699a 
+
+As he turned a corner, he saw them. The aliens. They were tall and slender, with skin the color of copper and eyes that glowed like fire. They stood in a line across the road, blocking his way. #line:0a60478 
+
+The human's heart pounded in his chest as he reached for his weapon. He knew that he was vastly outnumbered, but he was not going to give up without a fight. He would not let these creatures take him without a struggle. #line:0755988 
+
+The aliens began to move towards him, their eyes fixed on his every move. The human took a deep breath and aimed his weapon. He squeezed the trigger and a burst of energy shot out, hitting one of the aliens square in the chest. #line:0cc68c0 
+
+The alien cried out in pain and fell to the ground, writhing in agony. The other aliens hesitated for a moment, then redoubled their efforts. They surrounded the human, their weapons drawn and ready to fire. #line:0c5b692 
+
+The human fought with all his might, but it was a losing battle. The aliens were too strong and too fast. He could feel his strength beginning to flag, and he knew that he was about to lose the fight. #line:0f7c387 
+
+But just as the aliens were about to deliver the final blow, a loud siren blared through the air. The aliens stopped in their tracks and looked up in alarm. A group of human soldiers had arrived, ready to take on the aliens and defend their planet. #line:0ae1cba 
+
+The human grinned in relief as he watched the aliens retreat. He knew that it would not be the last time that he would face them, but he was ready for the next battle. He would not let these creatures defeat him. He was a fighter, and he would fight to the very end to protect his home and his people.  #line:0184b32 
+
+Go ahead to controllor room. I will take some rest. #line:07b1e23 
+===
+
+title: NoNeed
+tag: NotNeeded
+---
+Sorry for bothering you.  #line:042c202 
+I thougt you might be interested. #line:0e15d7d 
+===

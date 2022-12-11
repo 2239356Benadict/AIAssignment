@@ -4,7 +4,7 @@ tags:
 
 ===
 title:LouiseDialogue
-tag:Introduction
+tag:IntroductionID
 ---
 <<declare $needToUpadteID=false>>
 <<declare $noNeedUpdate=false>>
@@ -12,10 +12,10 @@ tag:Introduction
 Hi, Do you need to update ID? #line:0cddc87 
 //options
 -> Yes #line:06a3406 
-    <<<set $needToUpadteID=true>>
+    <<set $needToUpadteID=true>>
     <<jump NeedToUpdate>>
 -> No #line:0b88bde 
-    <<<set $noNeedOfhelp=true>>
+    <<set $noNeedOfhelp=true>>
     <<jump NoNeedOfUpdation>>
 ===
 
