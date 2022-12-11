@@ -12,10 +12,8 @@ namespace Assets.Scripts
     public class PlayerInteraction : MonoBehaviour
     {
         public Animator npcAnimator;
-        public Animation npcAnimationclips;
-        public float walkingSpeed;
 
-        public AudioClip[] interactionAudio;
+        public float walkingSpeed;
 
         public GameObject playerObject;
 
@@ -29,10 +27,15 @@ namespace Assets.Scripts
             if(other.gameObject.tag == "Player")
             {
                 float dist = Vector3.Distance(other.gameObject.transform.position, gameObject.transform.position);
+                Debug.Log(dist);
                 if(dist > 0.5f)
                 {
-                    gameObject.transform.LookAt(other.transform);
+                    //gameObject.transform.LookAt(other.transform);
                     ApproachPlayer();
+                }
+                else if (dist <= 0.5f)
+                {
+                    npcAnimator.Play("Idle");
                 }
             }
         }

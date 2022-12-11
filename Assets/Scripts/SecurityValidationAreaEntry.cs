@@ -11,8 +11,10 @@ public class SecurityValidationAreaEntry : MonoBehaviour
 {
     public float pullBackValue;
     public Animator avatarAnimator;
-
+    public IDPlaced iDOnScanner;
     public Transform[] pullBackObjects;
+
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
@@ -24,7 +26,19 @@ public class SecurityValidationAreaEntry : MonoBehaviour
                 Debug.Log("Player entered security check area.");
                 avatarAnimator.Play("");
             }
-            
         }
+        if (iDOnScanner.iDPlaced == true)
+        {
+            foreach (Transform obj in pullBackObjects)
+            {
+                obj.transform.Translate(new Vector3(0.01f, 0f, pullBackValue));
+                obj.transform.Rotate(new Vector3(0f, 0f, 0f), Space.Self);
+                Debug.Log("Player entered security check area.");
+                avatarAnimator.Play("");
+            }
+        }
+ 
     }
+
+
 }

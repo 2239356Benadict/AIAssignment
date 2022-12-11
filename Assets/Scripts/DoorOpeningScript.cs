@@ -16,6 +16,7 @@ public class DoorOpeningScript : MonoBehaviour
 
     public GameObject door;
 
+    public float automaticClosingTime;
     /// <summary>
     /// Checking whether the ID Card is collided or not.
     /// </summary>
@@ -75,7 +76,10 @@ public class DoorOpeningScript : MonoBehaviour
         yield return new WaitForSeconds(waitingTime);
         doorAudioSource.clip = doorAudioClip[1];
         doorAudioSource.Play();
-        door.transform.Rotate(new Vector3(0f, 90f, 0f));      
+        door.transform.Rotate(new Vector3(0f, 90f, 0f));
+
+        yield return new WaitForSeconds(automaticClosingTime);
+        door.transform.Rotate(new Vector3(0f, 0f, 0f));
     }
 
 }

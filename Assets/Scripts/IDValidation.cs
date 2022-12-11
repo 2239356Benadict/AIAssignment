@@ -26,7 +26,7 @@ public class IDValidation : MonoBehaviour
     public Image approvedImage;
     public Image securityApprovalImage;
 
-
+  
 
     private void Start()
     {
