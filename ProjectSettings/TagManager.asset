@@ -10,6 +10,7 @@ TagManager:
   - Door
   - Security Door
   - NPC
+  - PickablePoint
   layers:
   - Default
   - TransparentFX

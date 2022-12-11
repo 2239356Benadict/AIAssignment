@@ -48,7 +48,7 @@ public class IDValidation : MonoBehaviour
             validatedID.text = validatedIDNumber.ToString();
             Debug.Log("Validated");
         }
-        else if(other.gameObject.tag == "Security Validator")
+        if(other.gameObject.tag == "Security Validator")
         {
             StartCoroutine(SecurityValidationRoutine());
             Debug.Log("Security Check Pass");
