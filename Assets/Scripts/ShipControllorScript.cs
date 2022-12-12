@@ -25,4 +25,25 @@ public class ShipControllorScript : MonoBehaviour
         Destroy(gameObject);
 
     }
+
+    public float speed = 5.0f;  // Speed at which the game object will move
+
+    public void SpaceShipMoveLeft()
+    {
+        Vector3 currentPosition = transform.position;
+        currentPosition.z -= speed * Time.deltaTime;
+        // Update the position of the game object
+        transform.position = currentPosition;
+    }
+
+    public void SpaceShipMoveRight()
+    {
+        Vector3 currentPosition = transform.position;
+        currentPosition.z += speed * Time.deltaTime;
+        // Update the position of the game object
+        transform.position = currentPosition;
+    }
+
+
+
 }
