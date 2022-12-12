@@ -7,17 +7,31 @@ As the human walked down the dusty road, he could feel the tension in the air. I
 ### **Video**
 [<img src="https://github.com/2239356Benadict/Assignment1/blob/main/Spacewar2.png" width="1000" height="" />](https://youtu.be/3ujdjdDeuag)
 
-#### **Additional Feature 1: The explanation of the purpose and features of the Dialogue**
+#### **The explanation of the purpose and features of the Dialogue**
 <p align="justify">
 In the beginning, the user must validate an ID; if the user has doubts once the user approaches an NPC, the NPC comes forward and asks whether help is needed. And the user has the option to accept or reject. If the user asks for help, a full explanation about how to validate the ID or the user could ask about each step.
 Another NPC who is sitting on the chair explains what has happened. This helps the user to understand the story behind the scenes and could help the understand the current situation and environment. Also, there are two NPCs discussing the work once the user approaches one of the NPCs instructs the user to go to the High-Security area.
 As the user approaches the door of the High-Security area NPC sitting on the chair asks whether he needs to update the ID for permission to enter the High-Security area and instructs what to do. Apart from that once the user is in the high-security area, the dialogue will be between the NPC standing and the NPC will instruct what to do. The NPC explains what to do to enter the high-security area.
 
-#### **Additional Feature 2: The explanation of the purpose and features of the Crowd**
+#### **The explanation of the purpose and features of the Crowd**
 <p align="justify">
 In the VR environment, the main purpose of the NPCs is to help the user to reach the High-Security area and to make the user understand the story and environment. To enter the High-Security area user must validate the ID at different stages. Some NPC responds to the user so that the user can understand what to do next. People are discussing what are all the works that they want to do and discuss different situations. There are security guards, one inside and one outside, walking around using NavMesh systems.
 
-#### **Additional Feature 3: The explanation of the purpose and features of the Story**
+#### **The explanation of the purpose and features of the Story**
 <p align="justify">
 The story thread is about the war between humans and aliens. The player is in a space station where the decisions of the attack are taking place and the live status of the universe is shown. Since the player enters the ship for the first time, the player must validate the ID with the use of ID validation equipment. The ID must validate separately for the normal door and security door. During the process, the user will meet different NPCs who will give explanations on what to do to reach the destination and about the story behind the situation user is in.   
   
+###Credits
+####Assets used in the project:
+1.	Character/Manikin and Animations: Mixamo
+2.	3D Models: Turbosquid
+3.	Textures: textures.com
+4.	Dialogue: YarnSpinner
+5.	Audio: uberduck.ai
+
+###References
+1.	Textures: https://textures.com/
+2.	3D Models: https://turbosquid.com/
+3.	Audio Trimming: https://mp3cut.net/
+4.	Text to speech: https://uberduck.ai/
+5.	Yarn Spinner: https://yarnspinner.dev/docs/unity/
