@@ -11,6 +11,8 @@ TagManager:
   - Security Door
   - NPC
   - PickablePoint
+  - Enemy
+  - Guard
   layers:
   - Default
   - TransparentFX

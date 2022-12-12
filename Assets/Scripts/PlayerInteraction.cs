@@ -12,12 +12,11 @@ namespace Assets.Scripts
     public class PlayerInteraction : MonoBehaviour
     {
         public Animator npcAnimator;
-        public Animation npcAnimationclips;
+
         public float walkingSpeed;
 
-        public AudioClip[] interactionAudio;
-
         public GameObject playerObject;
+        public GameObject initialPositionGameObject;
 
         private void Start()
         {
@@ -29,14 +28,26 @@ namespace Assets.Scripts
             if(other.gameObject.tag == "Player")
             {
                 float dist = Vector3.Distance(other.gameObject.transform.position, gameObject.transform.position);
+                Debug.Log(dist);
                 if(dist > 0.5f)
                 {
-                    gameObject.transform.LookAt(other.transform);
+                    //gameObject.transform.LookAt(other.transform);
                     ApproachPlayer();
+                }
+                else if (dist <= 0.5f)
+                {
+                    npcAnimator.Play("Idle");
                 }
             }
         }
 
+        public void OnTriggerExit(Collider other)
+        {
+            if(other.gameObject.tag == "Player")
+            {
+                StartCoroutine("WalkBakToPlace");
+            }
+        }
         /// <summary>
         /// NPC approaches player
         /// </summary>
@@ -44,6 +55,18 @@ namespace Assets.Scripts
         {
             npcAnimator.Play("Walking");
             gameObject.transform.Translate(Vector3.forward * walkingSpeed);
+        }
+
+        IEnumerator WalkBakToPlace()
+        {
+            npcAnimator.Play("Left Turn");
+            yield return new WaitForSeconds(1.5f);
+            npcAnimator.Play("Walking");
+            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position,initialPositionGameObject.transform.position, walkingSpeed);
+            yield return new WaitForSeconds(1.5f);
+            gameObject.transform.position = initialPositionGameObject.transform.position;
+            gameObject.transform.rotation = initialPositionGameObject.transform.rotation;
+            npcAnimator.Play("Left Turn");
         }
     }
 }

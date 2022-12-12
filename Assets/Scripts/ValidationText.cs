@@ -18,6 +18,7 @@ public class ValidationText : MonoBehaviour
     {
         if(other.gameObject.tag == "IDCard")
         {
+            validationText.text = "Please hold the ID Card until validated text appears.";
             validationOutputText = other.GetComponent<IDValidation>();
             if (validationOutputText.isValidated)
             {

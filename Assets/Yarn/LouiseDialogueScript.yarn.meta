@@ -11,4 +11,6 @@ ScriptedImporter:
   LastImportHadImplicitStringIDs: 0
   LastImportHadAnyStrings: 1
   isSuccessfullyParsed: 1
-  parseErrorMessages: []
+  parseErrorMessages:
+  - "22:0: Error: The node 'NeedToUpdate ' contains illegal characters in its title.\r\ntitle:
+    NeedToUpdate \r\n"
