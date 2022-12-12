@@ -13,13 +13,13 @@ Hi, Do you need to update ID? #line:0cddc87
 //options
 -> Yes #line:06a3406 
     <<set $needToUpadteID=true>>
-    <<jump NeedUpdate>>
+    <<jump NeedOfIdUpdation>>
 -> No #line:0b88bde 
     <<set $noNeedOfhelp=true>>
     <<jump NoNeedOfUpdation>>
 === 
 
-title: NeedUpdate 
+title: NeedOfIdUpdation
 tag: NeedUpdation
 ---
 Please place the ID on top op the scanner. #line:00e3e15 
