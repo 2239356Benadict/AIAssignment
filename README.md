@@ -21,15 +21,15 @@ In the VR environment, the main purpose of the NPCs is to help the user to reach
 <p align="justify">
 The story thread is about the war between humans and aliens. The player is in a space station where the decisions of the attack are taking place and the live status of the universe is shown. Since the player enters the ship for the first time, the player must validate the ID with the use of ID validation equipment. The ID must validate separately for the normal door and security door. During the process, the user will meet different NPCs who will give explanations on what to do to reach the destination and about the story behind the situation user is in.   
   
-###Credits
-####Assets used in the project:
+### **Credits**
+#### **Assets used in the project:**
 1.	Character/Manikin and Animations: Mixamo
 2.	3D Models: Turbosquid
 3.	Textures: textures.com
 4.	Dialogue: YarnSpinner
 5.	Audio: uberduck.ai
 
-###References
+### **References**
 1.	Textures: https://textures.com/
 2.	3D Models: https://turbosquid.com/
 3.	Audio Trimming: https://mp3cut.net/
