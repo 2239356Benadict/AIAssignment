@@ -3,8 +3,8 @@ tags:
 ---
 
 ===
-title:LouiseDialogue
-tag:IntroductionID
+title: LouiseDialogue
+tag: IntroductionID
 ---
 <<declare $needToUpadteID=false>>
 <<declare $noNeedUpdate=false>>
@@ -13,13 +13,13 @@ Hi, Do you need to update ID? #line:0cddc87
 //options
 -> Yes #line:06a3406 
     <<set $needToUpadteID=true>>
-    <<jump NeedToUpdate>>
+    <<jump NeedUpdate>>
 -> No #line:0b88bde 
     <<set $noNeedOfhelp=true>>
     <<jump NoNeedOfUpdation>>
-===
+=== 
 
-title: NeedToUpdate
+title: NeedUpdate 
 tag: NeedUpdation
 ---
 Please place the ID on top op the scanner. #line:00e3e15 

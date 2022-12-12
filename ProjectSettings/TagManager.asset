@@ -12,6 +12,7 @@ TagManager:
   - NPC
   - PickablePoint
   - Enemy
+  - Guard
   layers:
   - Default
   - TransparentFX

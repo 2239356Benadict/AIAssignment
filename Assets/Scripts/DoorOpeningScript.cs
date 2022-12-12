@@ -28,6 +28,13 @@ public class DoorOpeningScript : MonoBehaviour
             validationScript = other.GetComponent<IDValidation>();
             CheckCardValidationStatus();
         }
+        else if (other.gameObject.tag == "Guard")
+        {
+            doorAudioSource.clip = doorAudioClip[1];
+            doorAudioSource.Play();
+            door.transform.Rotate(new Vector3(0f, 90f, 0f));
+            Debug.Log("Guard Entered");
+        }
         else
         {
             doorAudioSource.clip = doorAudioClip[2];
@@ -61,6 +68,7 @@ public class DoorOpeningScript : MonoBehaviour
                 doorAudioSource.clip = doorAudioClip[2];
             }
         }
+        
     }
 
     /// <summary>

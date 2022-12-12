@@ -13,32 +13,40 @@ public class SecurityValidationAreaEntry : MonoBehaviour
     public Animator avatarAnimator;
     public IDPlaced iDOnScanner;
     public Transform[] pullBackObjects;
-
+    public bool turnedToPlayer;
+    public AudioSource typeWriting;
 
     private void OnTriggerEnter(Collider other)
     {
+        
         if (other.tag == "Player")
         {
-            foreach(Transform obj in pullBackObjects)
+            turnedToPlayer = true;
+            if (turnedToPlayer)
             {
-                obj.transform.Translate(new Vector3(0.01f, 0f, pullBackValue));
-                obj.transform.Rotate(new Vector3(0f, -95f, 0f), Space.Self);
-                Debug.Log("Player entered security check area.");
-                avatarAnimator.Play("");
-            }
+                foreach (Transform obj in pullBackObjects)
+                {
+                    obj.transform.Translate(new Vector3(0.01f, 0f, pullBackValue));
+                    obj.transform.Rotate(new Vector3(0f, -95f, 0f), Space.Self);
+                    Debug.Log("Player entered security check area.");
+                    avatarAnimator.Play("Type To Sit");
+                }
+            } 
         }
-        if (iDOnScanner.iDPlaced == true)
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.tag == "Player")
         {
+            turnedToPlayer = false;
             foreach (Transform obj in pullBackObjects)
             {
-                obj.transform.Translate(new Vector3(0.01f, 0f, pullBackValue));
-                obj.transform.Rotate(new Vector3(0f, 0f, 0f), Space.Self);
+                obj.transform.Translate(new Vector3(0f, 0f, 0f));
+                obj.transform.Rotate(new Vector3(0f, 95f, 0f), Space.Self);
                 Debug.Log("Player entered security check area.");
-                avatarAnimator.Play("");
+                avatarAnimator.Play("SittingAndTyping");
             }
         }
- 
     }
-
 
 }

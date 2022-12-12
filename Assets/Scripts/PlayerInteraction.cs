@@ -16,6 +16,7 @@ namespace Assets.Scripts
         public float walkingSpeed;
 
         public GameObject playerObject;
+        public GameObject initialPositionGameObject;
 
         private void Start()
         {
@@ -40,6 +41,13 @@ namespace Assets.Scripts
             }
         }
 
+        public void OnTriggerExit(Collider other)
+        {
+            if(other.gameObject.tag == "Player")
+            {
+                StartCoroutine("WalkBakToPlace");
+            }
+        }
         /// <summary>
         /// NPC approaches player
         /// </summary>
@@ -47,6 +55,18 @@ namespace Assets.Scripts
         {
             npcAnimator.Play("Walking");
             gameObject.transform.Translate(Vector3.forward * walkingSpeed);
+        }
+
+        IEnumerator WalkBakToPlace()
+        {
+            npcAnimator.Play("Left Turn");
+            yield return new WaitForSeconds(1.5f);
+            npcAnimator.Play("Walking");
+            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position,initialPositionGameObject.transform.position, walkingSpeed);
+            yield return new WaitForSeconds(1.5f);
+            gameObject.transform.position = initialPositionGameObject.transform.position;
+            gameObject.transform.rotation = initialPositionGameObject.transform.rotation;
+            npcAnimator.Play("Left Turn");
         }
     }
 }
