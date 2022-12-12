@@ -11,13 +11,15 @@ public class RotateAround : MonoBehaviour
 {
     public GameObject pivotGameObject;
 
-    //public GameObject[] revolvingObjects;
+  
    
     public float rotateSpeed;
     public float rotationSpeed;
     void Update()
     {
+        //game object will rotate around a target object.
         gameObject.transform.RotateAround(pivotGameObject.transform.position, new Vector3(0, 1, 0), rotateSpeed * Time.deltaTime);
+        //gameobject rotate by itself
         gameObject.transform.Rotate(new Vector3(0, 180 * rotationSpeed, 0) * Time.deltaTime);
 
     }

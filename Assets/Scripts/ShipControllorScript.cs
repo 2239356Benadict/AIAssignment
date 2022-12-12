@@ -1,3 +1,8 @@
+// Tested in unity editor and Oculus Quest
+// Copyright (c) 2239356@swanseauniversity. All rights reserved.
+// Dated: 12/12/2020
+// This script is used to move the Space ship inside the High security room to left and right.
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,29 +10,12 @@ using UnityEngine.UI;
 
 public class ShipControllorScript : MonoBehaviour
 {
-    public ParticleSystem destroyParticleSystem;
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.tag == "Enemy")
-        {
-            StartCoroutine("DestroyShip");
-        }
-    }
-
-
-
-    IEnumerator DestroyShip(float destroyDelayTime)
-    {
-        destroyParticleSystem.Play();
-        yield return new WaitForSeconds(destroyDelayTime);
-
-        Destroy(gameObject);
-
-    }
-
+ 
     public float speed = 5.0f;  // Speed at which the game object will move
 
+    /// <summary>
+    /// Method to move the SpaceShip to left.
+    /// </summary>
     public void SpaceShipMoveLeft()
     {
         Vector3 currentPosition = transform.position;
@@ -36,6 +24,9 @@ public class ShipControllorScript : MonoBehaviour
         transform.position = currentPosition;
     }
 
+    /// <summary>
+    /// Method to move the SpaceShip to right.
+    /// </summary>
     public void SpaceShipMoveRight()
     {
         Vector3 currentPosition = transform.position;
