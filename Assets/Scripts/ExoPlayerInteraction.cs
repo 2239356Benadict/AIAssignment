@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ExoPlayerInteraction : MonoBehaviour
 {
+    public Transform initialPosition;
     public GameObject playerObject;
 
     private void Start()
@@ -16,6 +17,15 @@ public class ExoPlayerInteraction : MonoBehaviour
         if (other.tag == "Player")
         {
             gameObject.transform.LookAt(playerObject.transform);
+            Debug.Log("Met player");
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            gameObject.transform.LookAt(initialPosition.position);
             Debug.Log("Met player");
         }
     }
