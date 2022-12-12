@@ -17,10 +17,12 @@ namespace Assets.Scripts
 
         public GameObject playerObject;
         public GameObject initialPositionGameObject;
+        public BoxCollider triggerCollider;
 
         private void Start()
         {
             playerObject = GameObject.FindGameObjectWithTag("Player");
+            triggerCollider = gameObject.GetComponent<BoxCollider>();
         }
 
         private void OnTriggerEnter(Collider other)
@@ -33,11 +35,14 @@ namespace Assets.Scripts
                 {
                     //gameObject.transform.LookAt(other.transform);
                     ApproachPlayer();
+                    
                 }
                 else if (dist <= 0.5f)
                 {
                     npcAnimator.Play("Idle");
+                    triggerCollider.isTrigger = false;
                 }
+
             }
         }
 
