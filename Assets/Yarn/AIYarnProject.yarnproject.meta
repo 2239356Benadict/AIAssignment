@@ -9,58 +9,13 @@ ScriptedImporter:
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 053561912b1654d80a424bb0696a74ae, type: 3}
   sourceScripts:
-  - {fileID: 6391573757903218779, guid: 2011987640b894941a915cfc2b8c66bd, type: 3}
   - {fileID: 6391573757903218779, guid: c8f2b83b51d4e6245aa81b33d846bb40, type: 3}
   - {fileID: 6391573757903218779, guid: 724aad91e27ed6042831ef6d92db4f6b, type: 3}
   - {fileID: 6391573757903218779, guid: 8705fa3cc6d0f5847985940127438571, type: 3}
   - {fileID: 6391573757903218779, guid: 4bd447c35f6082442bf020bc8c21def3, type: 3}
+  - {fileID: 6391573757903218779, guid: 2011987640b894941a915cfc2b8c66bd, type: 3}
   compileErrors: []
-  serializedDeclarations:
-  - name: $needHelpToMoveAhead
-    typeName: Bool
-    defaultValueBool: 0
-    defaultValueNumber: 0
-    defaultValueString: 
-    description: 
-    isImplicit: 0
-    sourceYarnAsset: {fileID: 6391573757903218779, guid: 2011987640b894941a915cfc2b8c66bd,
-      type: 3}
-  - name: $noNeedOfhelp
-    typeName: Bool
-    defaultValueBool: 0
-    defaultValueNumber: 0
-    defaultValueString: 
-    description: 
-    isImplicit: 0
-    sourceYarnAsset: {fileID: 6391573757903218779, guid: 2011987640b894941a915cfc2b8c66bd,
-      type: 3}
-  - name: $explain
-    typeName: Bool
-    defaultValueBool: 0
-    defaultValueNumber: 0
-    defaultValueString: 
-    description: 
-    isImplicit: 0
-    sourceYarnAsset: {fileID: 6391573757903218779, guid: 2011987640b894941a915cfc2b8c66bd,
-      type: 3}
-  - name: $likeToKnow
-    typeName: Bool
-    defaultValueBool: 0
-    defaultValueNumber: 0
-    defaultValueString: 
-    description: 
-    isImplicit: 0
-    sourceYarnAsset: {fileID: 6391573757903218779, guid: c8f2b83b51d4e6245aa81b33d846bb40,
-      type: 3}
-  - name: $noNeedToKnow
-    typeName: Bool
-    defaultValueBool: 0
-    defaultValueNumber: 0
-    defaultValueString: 
-    description: 
-    isImplicit: 0
-    sourceYarnAsset: {fileID: 6391573757903218779, guid: c8f2b83b51d4e6245aa81b33d846bb40,
-      type: 3}
+  serializedDeclarations: []
   defaultLanguage: en-GB
   languagesToSourceAssets:
   - languageID: en-GB

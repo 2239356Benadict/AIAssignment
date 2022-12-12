@@ -25,6 +25,10 @@ namespace Assets.Scripts
             triggerCollider = gameObject.GetComponent<BoxCollider>();
         }
 
+        /// <summary>
+        /// Calculating distance to player on trigger enter and NPC walk towards player
+        /// </summary>
+        /// <param name="other"></param>
         private void OnTriggerEnter(Collider other)
         {
             if(other.gameObject.tag == "Player")
@@ -46,6 +50,10 @@ namespace Assets.Scripts
             }
         }
 
+        /// <summary>
+        /// NPC walks back to the initial position.
+        /// </summary>
+        /// <param name="other"></param>
         public void OnTriggerExit(Collider other)
         {
             if(other.gameObject.tag == "Player")
@@ -53,6 +61,7 @@ namespace Assets.Scripts
                 StartCoroutine("WalkBakToPlace");
             }
         }
+
         /// <summary>
         /// NPC approaches player
         /// </summary>

@@ -13,7 +13,10 @@ public class ValidationText : MonoBehaviour
     public TextMeshProUGUI validationText;
     private IDValidation validationOutputText;
 
-
+    /// <summary>
+    /// Update the text on monitor
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "IDCard")

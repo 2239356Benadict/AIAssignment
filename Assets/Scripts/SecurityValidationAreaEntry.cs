@@ -1,7 +1,7 @@
 // Tested in unity editor and Oculus Quest
 // Copyright (c) 2239356@swanseauniversity. All rights reserved.
 // Dated: 12/12/2020
-// This script is used to pullback the seat and NPC once the player approaches.
+// This script is used to pull and push the seat and NPC once the player approaches.
 
 using System.Collections;
 using System.Collections.Generic;
@@ -16,6 +16,10 @@ public class SecurityValidationAreaEntry : MonoBehaviour
     public bool turnedToPlayer;
     public AudioSource typeWriting;
 
+    /// <summary>
+    /// While player enters trigger area the NPC and the seat NPC is sitting will pulledback and turn -95 degrees.
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
         
@@ -35,6 +39,11 @@ public class SecurityValidationAreaEntry : MonoBehaviour
             } 
         }
     }
+
+    /// <summary>
+    /// Once Player exit the NPC and seat pushed back to initial position. 
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerExit(Collider other)
     {
         if(other.tag == "Player")
