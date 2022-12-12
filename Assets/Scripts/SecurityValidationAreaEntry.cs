@@ -30,6 +30,7 @@ public class SecurityValidationAreaEntry : MonoBehaviour
                     obj.transform.Rotate(new Vector3(0f, -95f, 0f), Space.Self);
                     Debug.Log("Player entered security check area.");
                     avatarAnimator.Play("Type To Sit");
+                    typeWriting.Stop();
                 }
             } 
         }
@@ -45,6 +46,7 @@ public class SecurityValidationAreaEntry : MonoBehaviour
                 obj.transform.Rotate(new Vector3(0f, 95f, 0f), Space.Self);
                 Debug.Log("Player entered security check area.");
                 avatarAnimator.Play("SittingAndTyping");
+                typeWriting.Play();
             }
         }
     }
