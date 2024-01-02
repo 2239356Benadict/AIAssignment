@@ -1,0 +1,11 @@
+Model Information:
+* title:	Space Fighter Aircraft with Animated Wings
+* source:	https://sketchfab.com/3d-models/space-fighter-aircraft-with-animated-wings-5a01a2fc03cf4b53b530cdcca5a8582b
+* author:	Inditrion Dradnon (https://sketchfab.com/dradnon)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Space Fighter Aircraft with Animated Wings" (https://sketchfab.com/3d-models/space-fighter-aircraft-with-animated-wings-5a01a2fc03cf4b53b530cdcca5a8582b) by Inditrion Dradnon (https://sketchfab.com/dradnon) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
