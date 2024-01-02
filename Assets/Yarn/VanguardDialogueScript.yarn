@@ -1,4 +1,4 @@
-﻿title: VanguardDialogueScript
+title: VanguardDialogueScript
 tags:
 ---
 
@@ -17,6 +17,7 @@ Hi, Would you like to know what happened to us? #line:0302758
 -> No #line:0ced794 
     <<set $noNeedToKnow=true>>
     <<jump NoNeed>>
+    
 ===
 
 title: KnowMore
